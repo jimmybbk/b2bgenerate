@@ -37,10 +37,12 @@ Shared code: `css/styles.css`, `js/main.js`. The XML sitemap lists every page.
 - **WhatsApp widget** floats on every page (bottom-right, green) →
   `https://wa.me/61466554433` with a prefilled intro message. Also linked in the
   topbar footer contact column, final CTAs, and the mobile sticky bar.
-- **All form submissions route to `wayne.clothier@hotmail.com`** — see
-  `LEAD_EMAIL` in `js/main.js`. Until a form endpoint is configured, submissions
-  fall back to opening the visitor's email client addressed there. To upgrade,
-  paste a Formspree/Basin endpoint into `FORM_ENDPOINT` in the same file.
+- **All form submissions auto-send to `hello@b2bgenerate.com`** — `FORM_ENDPOINT` in
+  `js/main.js` posts to FormSubmit (`https://formsubmit.co/ajax/hello@b2bgenerate.com`),
+  which emails every submission directly: no mail popup for the visitor. **One-time
+  activation:** the first submission makes FormSubmit send a verification link to that
+  inbox — click it once and delivery is live. The mailbox must exist on the
+  b2bgenerate.com domain.
 - **Hours shown as Mon–Fri, 9am–5pm Thailand time (ICT)** on every page and in the
   hero dashboard mock.
 
@@ -74,7 +76,7 @@ GA4/Plausible + Microsoft Clarity.
 | Blog | 3 "Coming soon" stubs | `blog/index.html` |
 | Pricing claim | "from US$2,500/month" | FAQ + pricing page — align with real terms |
 | Guarantee terms | "agreed lead target / that period" | Must match the actual service contract |
-| Form endpoint | `""` (mailto fallback to wayne.clothier@hotmail.com) | `js/main.js` `FORM_ENDPOINT` |
+| Form endpoint | FormSubmit configured → `hello@b2bgenerate.com` | Click the activation link in that inbox once (sent on first submission) |
 
 ## Compliance notes
 

@@ -1,10 +1,11 @@
 // ===== B2BGenerate shared site script =====
 
 // ===== Lead delivery =====
-// Paste your form endpoint (Formspree, Basin, HubSpot, etc.) here and leads will POST to it.
-// Until then, submissions fall back to opening the visitor's email client addressed to LEAD_EMAIL.
-const FORM_ENDPOINT = ""; // e.g. "https://formspree.io/f/abcdwxyz"
-const LEAD_EMAIL = "wayne.clothier@hotmail.com";
+// FormSubmit auto-emails every submission to the address below — no mail popup for the visitor.
+// One-time setup: the very first submission makes FormSubmit send an activation link to that
+// inbox; clicking it once switches on automatic delivery for all future submissions.
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/hello@b2bgenerate.com";
+const LEAD_EMAIL = "hello@b2bgenerate.com";
 const WHATSAPP_NUMBER = "61466554433"; // international format without "+", for wa.me links
 
 async function deliverLead(payload) {
@@ -12,7 +13,12 @@ async function deliverLead(payload) {
     const res = await fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: { "Accept": "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        ...payload,
+        _subject: "New B2BGenerate website lead",
+        _template: "table",
+        _captcha: "false"
+      })
     });
     if (!res.ok) throw new Error("Lead delivery failed");
     return;
