@@ -56,6 +56,7 @@ buttons currently route to the contact page form + WhatsApp.
 - JSON-LD: `ProfessionalService` + `WebSite` (home), `FAQPage` on home (9 Q&As) and
   pricing (4 Q&As), each mirroring that page's visible content
 - Semantic headings, SVG icons, alt text, sitemap + robots.txt
+- `llms.txt` at the site root: LLM-friendly site summary (linked from every footer)
 
 **Next SEO step (needs your accounts):** Google Search Console + sitemap submit;
 GA4/Plausible + Microsoft Clarity.

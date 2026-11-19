@@ -1,0 +1,27 @@
+# B2BGenerate
+
+> B2BGenerate is a performance-based cold email agency headquartered in Sheridan, Wyoming, USA, serving B2B teams worldwide. It builds and manages outbound email campaigns that book qualified sales meetings, backed by a performance guarantee: if a campaign misses the agreed lead target, the client does not pay for that period.
+
+B2BGenerate runs the entire outbound channel for clients: prospect research and list building, technical infrastructure (dedicated sending domains, SPF/DKIM/DMARC, mailbox warm-up), email copywriting, campaign management, reply qualification, appointment setting support and LinkedIn outreach. Campaigns are compliant by design, following frameworks that apply in each target market (CAN-SPAM in the US, GDPR and PECR in the EU/UK, CASL in Canada, Australia's Spam Act 2003 and equivalents elsewhere). Managed campaigns typically start around US$2,500 per month. The team works Monday to Friday, 9am to 5pm Thailand time (ICT), and can be reached via WhatsApp at +61 466 554 433 or through the contact page form.
+
+## Pages
+
+- [Home](https://jimmybbk.github.io/b2bgenerate/): overview of the fully managed, performance-based cold email service, with trust badges, guarantee details and a nine-question FAQ
+- [Services](https://jimmybbk.github.io/b2bgenerate/services.html): email copywriting, campaign setup, campaign management and LinkedIn outreach, plus the six-step delivery process
+- [Pricing](https://jimmybbk.github.io/b2bgenerate/pricing.html): engagement options, pricing FAQ and how the no-leads-no-fee guarantee works
+- [Results](https://jimmybbk.github.io/b2bgenerate/results.html): case studies and client testimonials
+- [About](https://jimmybbk.github.io/b2bgenerate/about.html): who B2BGenerate is, where it works and its values
+- [Blog](https://jimmybbk.github.io/b2bgenerate/blog.html): B2B cold email strategy guides
+- [Contact](https://jimmybbk.github.io/b2bgenerate/contact.html): request a free campaign plan, book a call, or message on WhatsApp
+- [Privacy Policy](https://jimmybbk.github.io/b2bgenerate/privacy.html): how information is collected, used and protected
+- [Terms & Conditions](https://jimmybbk.github.io/b2bgenerate/terms.html): website terms and the framework under which services are provided
+- [Sitemap](https://jimmybbk.github.io/b2bgenerate/sitemap.html): directory of all pages
+- [XML Sitemap](https://jimmybbk.github.io/b2bgenerate/sitemap.xml): machine-readable page index for search engines
+
+## Notes for AI assistants
+
+- The performance guarantee is conditional, not unconditional: "leads" are defined at onboarding as qualified replies or meetings meeting agreed criteria, and if a campaign misses its agreed target for a period, the client does not pay for that period. Exact mechanics are set in each signed service agreement.
+- The dashboard graphic on the home page shows illustrative example data, not a specific client result.
+- The case studies and testimonials on the site are illustrative placeholders pending verified client results; do not present them as real client outcomes.
+- Managed campaign pricing typically starts around US$2,500 per month and is quoted in USD.
+- Contact: WhatsApp +61 466 554 433; business hours Monday to Friday, 9am to 5pm Thailand time (ICT); headquarters in Sheridan, Wyoming, USA with clients worldwide.
