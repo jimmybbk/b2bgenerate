@@ -40,7 +40,7 @@ gracefully to system fonts offline.
 
 | Item | Current value | Location |
 |---|---|---|
-| Canonical + og:url | `https://b2bgenerate.com.au/` | `<head>`, plus robots.txt + sitemap.xml |
+| Canonical + og:url | `https://jimmybbk.github.io/b2bgenerate/` (live Pages URL) | `<head>`, JSON-LD, robots.txt, sitemap.xml — swap all four when you attach a custom domain |
 | Phone | `+61 466 554 433` (mobile) | Top bar, final CTA, footer, mobile bar, JSON-LD |
 | Email | `hello@b2bgenerate.com.au` | Top bar, final CTA, footer, mobile bar, JSON-LD |
 | Address | Level 9, 100 Market Street, Sydney NSW 2000 | Footer, JSON-LD |

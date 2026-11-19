@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- PLACEHOLDER: replace https://b2bgenerate.com.au/ with your real domain before launch -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://b2bgenerate.com.au/</loc>
+    <loc>https://jimmybbk.github.io/b2bgenerate/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
