@@ -7,15 +7,15 @@ B2BGenerate runs the entire outbound channel for clients: prospect research and 
 ## Pages
 
 - [Home](https://jimmybbk.github.io/b2bgenerate/): overview of the fully managed, performance-based cold email service, with trust badges, guarantee details and a nine-question FAQ
-- [Services](https://jimmybbk.github.io/b2bgenerate/services.html): email copywriting, campaign setup, campaign management and LinkedIn outreach, plus the six-step delivery process
-- [Pricing](https://jimmybbk.github.io/b2bgenerate/pricing.html): engagement options, pricing FAQ and how the no-leads-no-fee guarantee works
-- [Results](https://jimmybbk.github.io/b2bgenerate/results.html): case studies and client testimonials
-- [About](https://jimmybbk.github.io/b2bgenerate/about.html): who B2BGenerate is, where it works and its values
-- [Blog](https://jimmybbk.github.io/b2bgenerate/blog.html): B2B cold email strategy guides
-- [Contact](https://jimmybbk.github.io/b2bgenerate/contact.html): request a free campaign plan, book a call, or message on WhatsApp
-- [Privacy Policy](https://jimmybbk.github.io/b2bgenerate/privacy.html): how information is collected, used and protected
-- [Terms & Conditions](https://jimmybbk.github.io/b2bgenerate/terms.html): website terms and the framework under which services are provided
-- [Sitemap](https://jimmybbk.github.io/b2bgenerate/sitemap.html): directory of all pages
+- [Services](https://jimmybbk.github.io/b2bgenerate/services/): email copywriting, campaign setup, campaign management and LinkedIn outreach, plus the six-step delivery process
+- [Pricing](https://jimmybbk.github.io/b2bgenerate/pricing/): engagement options, pricing FAQ and how the no-leads-no-fee guarantee works
+- [Results](https://jimmybbk.github.io/b2bgenerate/results/): case studies and client testimonials
+- [About](https://jimmybbk.github.io/b2bgenerate/about/): who B2BGenerate is, where it works and its values
+- [Blog](https://jimmybbk.github.io/b2bgenerate/blog/): B2B cold email strategy guides
+- [Contact](https://jimmybbk.github.io/b2bgenerate/contact/): request a free campaign plan, book a call, or message on WhatsApp
+- [Privacy Policy](https://jimmybbk.github.io/b2bgenerate/privacy/): how information is collected, used and protected
+- [Terms & Conditions](https://jimmybbk.github.io/b2bgenerate/terms/): website terms and the framework under which services are provided
+- [Sitemap](https://jimmybbk.github.io/b2bgenerate/sitemap/): directory of all pages
 - [XML Sitemap](https://jimmybbk.github.io/b2bgenerate/sitemap.xml): machine-readable page index for search engines
 
 ## Notes for AI assistants

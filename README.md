@@ -15,18 +15,20 @@ about, guarantee banner, FAQs and CTAs all carry it.
 
 | Page | Purpose |
 |---|---|
-| `index.html` | Home — hero + guarantee, service trio, why-us, testimonials, full FAQ (9) |
-| `services.html` | Capabilities (copywriting/setup/management/LinkedIn) + 6-step process |
-| `pricing.html` | Engagements + pricing FAQ subset + guarantee fine print |
-| `results.html` | Case studies + testimonials |
-| `about.html` | Story, stats, where we work |
-| `blog.html` | Resource guides (stubs marked "Coming soon") |
-| `contact.html` | Campaign plan form, WhatsApp/booking options, calendar slot |
-| `privacy.html` | Privacy Policy (noindex) — template, needs legal review |
-| `terms.html` | Terms & Conditions (noindex) — template, needs legal review |
-| `sitemap.html` | Human-readable page directory (XML sitemap for search engines is separate) |
+| `index.html` | Home (served at `/`) — hero + guarantee, service trio, why-us, testimonials, full FAQ (9) |
+| `services/index.html` | Capabilities (copywriting/setup/management/LinkedIn) + 6-step process |
+| `pricing/index.html` | Engagements + pricing FAQ subset + guarantee fine print |
+| `results/index.html` | Case studies + testimonials |
+| `about/index.html` | Story, stats, where we work |
+| `blog/index.html` | Resource guides (stubs marked "Coming soon") |
+| `contact/index.html` | Campaign plan form, WhatsApp/booking options, calendar slot |
+| `privacy/index.html` | Privacy Policy (noindex) — template, needs legal review |
+| `terms/index.html` | Terms & Conditions (noindex) — template, needs legal review |
+| `sitemap/index.html` | Human-readable page directory (XML sitemap for search engines is separate) |
 
-Shared code: `css/styles.css`, `js/main.js`. Sitemap lists all 7 pages.
+Shared code: `css/styles.css`, `js/main.js`. The XML sitemap lists every page.
+
+**Clean URLs:** each subpage lives in its own folder (`services/index.html` served at `/services/`), so URLs have no `.html`. All internal links use directory paths (e.g. `../contact/`).
 
 ## Contact model (as requested)
 
@@ -44,7 +46,7 @@ Shared code: `css/styles.css`, `js/main.js`. Sitemap lists all 7 pages.
 
 ## Booking calendar (2-minute upgrade)
 
-In `contact.html`, search `BOOKING CALENDAR` and replace the comment with your
+In `contact/index.html`, search `BOOKING CALENDAR` and replace the comment with your
 Calendly or Cal.com inline embed (both snippets are in the comment). "Book a Call"
 buttons currently route to the contact page form + WhatsApp.
 
@@ -67,16 +69,16 @@ GA4/Plausible + Microsoft Clarity.
 |---|---|---|
 | Entity name | `B2BGenerate LLC` | Footer bottom on every page |
 | Address | "Sheridan, Wyoming, USA" (city only) | Footer/contact page/JSON-LD |
-| Case studies | 4 fictional examples | `results.html` — real, verifiable results only |
-| Testimonials | 3 fictional quotes | `results.html` + home — real quotes with consent |
-| Blog | 3 "Coming soon" stubs | `blog.html` |
+| Case studies | 4 fictional examples | `results/index.html` — real, verifiable results only |
+| Testimonials | 3 fictional quotes | `results/index.html` + home — real quotes with consent |
+| Blog | 3 "Coming soon" stubs | `blog/index.html` |
 | Pricing claim | "from US$2,500/month" | FAQ + pricing page — align with real terms |
 | Guarantee terms | "agreed lead target / that period" | Must match the actual service contract |
 | Form endpoint | `""` (mailto fallback to wayne.clothier@hotmail.com) | `js/main.js` `FORM_ENDPOINT` |
 
 ## Compliance notes
 
-- **`privacy.html` and `terms.html` are original templates written for this business
+- **`privacy/index.html` and `terms/index.html` are original templates written for this business
   — have a lawyer review them before relying on them.** They are drafted for a
   Wyoming LLC with worldwide clients (CAN-SPAM, GDPR/PECR, CASL and Australia's
   Spam Act referenced). Entity name, registered address and governing-law details
