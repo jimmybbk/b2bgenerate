@@ -1,13 +1,17 @@
-# B2BGenerate — Performance-Based Cold Email Agency (AU)
+# B2BGenerate — Performance-Based Cold Email Agency
 
-A single-file landing page (`index.html`) for **B2BGenerate**, an Australian
-performance-based cold email agency. Structure is modeled on a standard B2B agency
-one-pager; all copy is original, case studies/testimonials are fictional placeholders,
-and all visuals are CSS/SVG plus the supplied brand logo (`assets/b2bgenerate-logo.png`).
+A single-file landing page (`index.html`) for **B2BGenerate**, a performance-based
+cold email agency headquartered in Sheridan, Wyoming, USA, serving B2B clients
+worldwide. All copy is original, case studies/testimonials are fictional
+placeholders, and visuals are CSS/SVG plus the supplied brand logo
+(`assets/b2bgenerate-logo.png`) and generated social card (`assets/og-image.png`).
 
 **Core positioning baked into the copy:** *If we don't produce leads, you don't pay.*
-The guarantee appears in the hero, service cards, about section, a dedicated guarantee
-banner, FAQ #4 and the final CTA — keep these consistent if you reword it.
+It appears in the hero, service cards, about section, guarantee banner, FAQ #4 and
+the final CTA — keep these consistent if you reword it.
+
+**Live:** https://jimmybbk.github.io/b2bgenerate/ · Repo: `jimmybbk/b2bgenerate`
+(GitHub Pages, main branch). Any push to `main` redeploys automatically in ~1 minute.
 
 ## Brand colors (sampled directly from the logo PNG)
 
@@ -18,43 +22,55 @@ banner, FAQ #4 and the final CTA — keep these consistent if you reword it.
 | Gradient light | `#02AAFD` | Gradient start (buttons, icons) |
 | Gradient deep | `#054BBA` | Gradient end (guarantee icon) |
 | Light accent | `#4FC3FF` | Accents on dark backgrounds |
-| White | `#F6F7F8` | Logo wordmark |
+
+## Integrations (the two things to wire up)
+
+### 1. Form delivery — 2 minutes
+In `index.html`, find `const FORM_ENDPOINT = ""` in the `<script>` block and paste
+your endpoint, e.g. a Formspree address `https://formspree.io/f/xxxx` (free tier is
+fine). Leads then POST to it; until you do, submissions fall back to opening the
+visitor's email client addressed to `hello@b2bgenerate.com.au` — functional, but
+check that inbox.
+
+### 2. Booking calendar — 2 minutes
+In the final CTA section (search `BOOKING CALENDAR`), replace the comment with your
+Calendly or Cal.com inline embed (snippet included in the comment). Every "Book a
+Call" button on the page anchors to that section.
 
 ## SEO in place
 
-- Title + meta description targeting "performance-based cold email agency Australia"
-- Canonical, robots, theme-color, geo tags (canonical URL is a **placeholder**)
-- Open Graph + Twitter card tags (og:image → logo)
-- JSON-LD: `ProfessionalService` + `WebSite` (with AU address, opening hours, areaServed)
-- JSON-LD `FAQPage` mirroring all 9 visible FAQ items
-- `robots.txt` + `sitemap.xml` (domain placeholders — update both)
-- Semantic headings (single H1), descriptive alt text, `width`/`height` on images
+- Title "B2BGenerate | Cold Email Agency — No Leads, No Fee" + meta description
+- Canonical, robots, theme-color, geo tags (all pointing at the live Pages URL —
+  swap to your custom domain in these spots when you attach one)
+- Open Graph + Twitter cards with a generated 1200×630 share image
+  (`assets/og-image.png`, built from the logo)
+- JSON-LD: `ProfessionalService` + `WebSite` (Wyoming address, hours, areaServed
+  "Worldwide") and `FAQPage` mirroring all 9 visible FAQs
+- `robots.txt` + `sitemap.xml` pointing at the live URL
+- Semantic headings (single H1), SVG icons, alt text, width/height on images
 
-## Deploying
+**Next SEO step (needs your account):** add the site to Google Search Console and
+submit `sitemap.xml`; add GA4 or Plausible + Microsoft Clarity for analytics.
 
-The folder is fully static — deploy `index.html` + `assets/` to any static host
-(Netlify, Vercel, Cloudflare Pages). Google Fonts load from a CDN; the page degrades
-gracefully to system fonts offline.
+## Placeholders still to replace
 
-## Placeholders to replace before launch
-
-| Item | Current value | Location |
+| Item | Current value | Where |
 |---|---|---|
-| Canonical + og:url | `https://jimmybbk.github.io/b2bgenerate/` (live Pages URL) | `<head>`, JSON-LD, robots.txt, sitemap.xml — swap all four when you attach a custom domain |
-| Phone | `+61 466 554 433` (mobile) | Top bar, final CTA, footer, mobile bar, JSON-LD |
-| Email | `hello@b2bgenerate.com.au` | Top bar, final CTA, footer, mobile bar, JSON-LD |
-| Address | Level 9, 100 Market Street, Sydney NSW 2000 | Footer, JSON-LD |
-| ABN | `00 000 000 000` | Footer bottom |
-| Case studies | 4 fictional examples | `#results` — replace with real, verifiable results (Australian Consumer Law applies) |
+| Entity name | `B2BGenerate LLC` | Footer bottom (match exact registered name) |
+| Address | "Sheridan, Wyoming, USA" (city only) | Footer, JSON-LD — add full registered address |
+| Phone | `+61 466 554 433` (AU-format mobile, per your instruction) | Top bar, CTA, footer, mobile bar, JSON-LD — swap if you get a US number |
+| Email | `hello@b2bgenerate.com.au` | Everywhere + form fallback |
+| Case studies | 4 fictional examples (London/Austin/Singapore/Toronto) | `#results` — real, verifiable results only (FTC + state UDAP laws apply) |
 | Testimonials | 3 fictional quotes | Testimonials section — real quotes with written consent |
-| Forms | Front-end stubs | Wire `#planForm` and `#footerForm` to your CRM (marked in JS) |
-| Blog links | `#resources` anchors | Point to real articles |
-| Pricing claim | "from A$2,500/month" | FAQ #3 — align with your real terms |
-| Guarantee terms | "agreed lead target / that period" | Hero, trio disclaimer, guarantee banner, FAQ #4 — align with your actual service agreement |
+| Blog links | `#resources` anchors | Write the 3 guides and link them |
+| Pricing claim | "from US$2,500/month" | FAQ #3 — align with real pricing |
+| Guarantee terms | "agreed lead target / that period" | Hero, trio disclaimer, banner, FAQ #4 — must match your actual contract |
 
 ## Compliance notes
 
-- FAQ #7 references the Spam Act 2003 and Privacy Act 1988 — have your wording legally
-  reviewed before publishing; it is not legal advice.
-- The performance guarantee must match what your service contract actually offers,
-  otherwise it risks being a misleading claim under Australian Consumer Law.
+- The compliance FAQ references CAN-SPAM, GDPR/PECR, CASL and Australia's Spam Act
+  as the frameworks campaigns are designed around — have counsel review before launch.
+- The hero dashboard shows illustrative data with a visible "example campaign"
+  caption; keep that caption if you keep the mock.
+- Case-study metrics must be real where published (FTC Act §5 / state UDAP statutes
+  on deceptive representations).
