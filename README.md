@@ -22,6 +22,9 @@ about, guarantee banner, FAQs and CTAs all carry it.
 | `about.html` | Story, stats, where we work |
 | `blog.html` | Resource guides (stubs marked "Coming soon") |
 | `contact.html` | Campaign plan form, WhatsApp/booking options, calendar slot |
+| `privacy.html` | Privacy Policy (noindex) — template, needs legal review |
+| `terms.html` | Terms & Conditions (noindex) — template, needs legal review |
+| `sitemap.html` | Human-readable page directory (XML sitemap for search engines is separate) |
 
 Shared code: `css/styles.css`, `js/main.js`. Sitemap lists all 7 pages.
 
@@ -69,6 +72,20 @@ GA4/Plausible + Microsoft Clarity.
 | Pricing claim | "from US$2,500/month" | FAQ + pricing page — align with real terms |
 | Guarantee terms | "agreed lead target / that period" | Must match the actual service contract |
 | Form endpoint | `""` (mailto fallback to wayne.clothier@hotmail.com) | `js/main.js` `FORM_ENDPOINT` |
+
+## Compliance notes
+
+- **`privacy.html` and `terms.html` are original templates written for this business
+  — have a lawyer review them before relying on them.** They are drafted for a
+  Wyoming LLC with worldwide clients (CAN-SPAM, GDPR/PECR, CASL and Australia's
+  Spam Act referenced). Entity name, registered address and governing-law details
+  are placeholders. Both pages are `noindex` for search engines.
+- The compliance FAQ references CAN-SPAM, GDPR/PECR, CASL and Australia's Spam Act
+  as the frameworks campaigns are designed around — have counsel review before launch.
+- The hero dashboard shows illustrative data with a visible "example campaign"
+  caption; keep that caption if you keep the mock.
+- Case-study metrics must be real where published (FTC Act §5 / state UDAP statutes
+  on deceptive representations).
 
 ## Local preview
 
