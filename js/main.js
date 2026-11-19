@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         form.style.display = "none";
         document.getElementById("planSuccess").classList.add("show");
       } catch (err) {
-        alert("Sorry — something went wrong sending your request. Please WhatsApp us or email " + LEAD_EMAIL + " directly.");
+        alert("Sorry, something went wrong sending your request. Please WhatsApp us or email " + LEAD_EMAIL + " directly.");
       }
       btn.disabled = false;
       btn.textContent = "Request my campaign plan";
@@ -113,9 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = Object.fromEntries(new FormData(form).entries());
       try {
         await deliverLead({ type: "footer message", ...data });
-        form.innerHTML = '<p style="color:#fff">✓ Thanks — your message has been sent. We reply within one business day.</p>';
+        form.innerHTML = '<p style="color:#fff">✓ Thanks! Your message has been sent. We reply within one business day.</p>';
       } catch (err) {
-        alert("Sorry — something went wrong. Please WhatsApp us or email " + LEAD_EMAIL + " directly.");
+        alert("Sorry, something went wrong. Please WhatsApp us or email " + LEAD_EMAIL + " directly.");
       }
     });
   }
