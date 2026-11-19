@@ -28,7 +28,7 @@ about, guarantee banner, FAQs and CTAs all carry it.
 
 Shared code: `css/styles.css`, `js/main.js`. The XML sitemap lists every page.
 
-**Clean URLs:** each subpage lives in its own folder (`services/index.html` served at `/services/`), so URLs have no `.html`. All internal links use directory paths (e.g. `../contact/`).
+**Clean URLs:** each subpage lives in its own folder (`services/index.html` served at `/services/`), so URLs have no `.html`. Internal links and canonicals are slash-free (e.g. `../contact`); GitHub Pages adds an automatic redirect back to the trailing-slash form on github.io URLs.
 
 ## Contact model (as requested)
 
