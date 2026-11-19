@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: replace with your real domain before launch
+Sitemap: https://b2bgenerate.com.au/sitemap.xml
