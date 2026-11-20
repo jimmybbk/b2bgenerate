@@ -671,3 +671,8 @@ footer { background: #010409; color: #9fb0cf; padding: 72px 0 0; font-size: 14.5
   #heroWord::after { content: ""; animation: none; }
   .ripple { display: none; }
 }
+
+/* Article tables */
+.legal table { width: 100%; border-collapse: collapse; margin: 16px 0 20px; font-size: 14.5px; }
+.legal th, .legal td { border: 1px solid #dce3ef; padding: 10px 14px; text-align: left; color: var(--slate-600); }
+.legal th { background: var(--ice); font-family: var(--font-head); color: var(--ink); }
