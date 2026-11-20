@@ -4,40 +4,48 @@
     <loc>https://b2bgenerate.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/services</loc>
+    <loc>https://b2bgenerate.com/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/pricing</loc>
+    <loc>https://b2bgenerate.com/pricing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/results</loc>
+    <loc>https://b2bgenerate.com/results/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/about</loc>
+    <loc>https://b2bgenerate.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/blog</loc>
+    <loc>https://b2bgenerate.com/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/contact</loc>
+    <loc>https://b2bgenerate.com/contact/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
   <url>
-    <loc>https://b2bgenerate.com/sitemap</loc>
+    <loc>https://b2bgenerate.com/sitemap/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <lastmod>2026-11-20</lastmod>
   </url>
 </urlset>
