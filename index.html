@@ -163,7 +163,7 @@
       <div class="container">
         <div>
           <span class="hero-pill">★ Performance-based B2B cold email agency serving clients worldwide</span>
-          <h1>Performance-based cold email that books <em>qualified meetings</em> for B2B teams worldwide</h1>
+          <h1>Performance-based cold email that books <em id="heroWord">qualified meetings</em> for B2B teams worldwide</h1>
           <p class="lede">We run the entire outbound engine for you (prospect research, inbox infrastructure, copywriting, sending and reply handling) and hand over qualified sales conversations with decision-makers in your market, from New York to London to Singapore.</p>
           <div class="hero-badges" role="list">
             <span role="listitem">Agreed meeting criteria before we send</span>
@@ -189,25 +189,25 @@
             </div>
             <div class="dash-row">
               <span class="label">Emails delivered</span>
-              <span class="val">4,820</span>
+              <span class="val" data-count="4820">0</span>
             </div>
             <div class="dash-row">
               <div style="flex:1">
                 <span class="label">Replies · 6.9% reply rate</span>
-                <div class="bar"><i style="width:69%"></i></div>
+                <div class="bar"><i style="--w:69%"></i></div>
               </div>
-              <span class="val up">334</span>
+              <span class="val up" data-count="334">0</span>
             </div>
             <div class="dash-row">
               <div style="flex:1">
                 <span class="label">Positive replies</span>
-                <div class="bar"><i style="width:38%"></i></div>
+                <div class="bar"><i style="--w:38%"></i></div>
               </div>
-              <span class="val up">86</span>
+              <span class="val up" data-count="86">0</span>
             </div>
             <div class="dash-row">
               <span class="label">Meetings booked</span>
-              <span class="val">21</span>
+              <span class="val" data-count="21">0</span>
             </div>
           </div>
           <div class="float-chip">
@@ -263,6 +263,44 @@
       </div>
     </div>
 
+    <!-- Interactive calculator -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Interactive</span>
+          <h2>What could cold email generate for you?</h2>
+          <p>Drag the sliders to model a managed campaign using typical B2B benchmarks — then get a tailored plan built around your actual numbers.</p>
+        </div>
+        <div class="calc reveal" id="calcRoot">
+          <div class="calc-controls">
+            <div class="calc-field">
+              <label>Monthly email volume <output id="cv-emails">4,000</output></label>
+              <input type="range" id="cr-emails" min="1000" max="10000" step="500" value="4000" aria-label="Monthly email volume" />
+            </div>
+            <div class="calc-field">
+              <label>Reply rate <output id="cv-reply">5%</output></label>
+              <input type="range" id="cr-reply" min="2" max="12" step="0.5" value="5" aria-label="Reply rate" />
+            </div>
+            <div class="calc-field">
+              <label>Positive reply share <output id="cv-pos">40%</output></label>
+              <input type="range" id="cr-pos" min="20" max="60" step="5" value="40" aria-label="Positive reply share" />
+            </div>
+            <div class="calc-field">
+              <label>Meeting booking rate <output id="cv-meet">30%</output></label>
+              <input type="range" id="cr-meet" min="15" max="45" step="5" value="30" aria-label="Meeting booking rate" />
+            </div>
+          </div>
+          <div class="calc-results">
+            <div class="calc-result"><b id="cv-out-replies">200</b><span>replies / month</span></div>
+            <div class="calc-result"><b id="cv-out-pos">80</b><span>positive replies / month</span></div>
+            <div class="calc-result main"><b id="cv-out-meetings">24</b><span>booked meetings / month</span></div>
+            <a class="btn btn-primary" href="contact/#plan" style="justify-self:start">Get my tailored plan</a>
+            <p class="calc-note">Illustrative model using typical B2B benchmarks — not a guarantee. Your service agreement defines the agreed lead targets we commit to.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Why choose us -->
     <section class="section" id="why">
       <div class="container">
@@ -312,22 +350,34 @@
           <span class="eyebrow">Testimonials</span>
           <h2>What our clients say</h2>
         </div>
-        <div class="quotes">
-          <!-- PLACEHOLDER: replace with real client testimonials -->
-          <div class="quote reveal">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <blockquote>"We'd been burned by two agencies before. These guys agreed on what a qualified meeting looked like up front, then actually delivered them. Our calendar hasn't looked this healthy in years."</blockquote>
-            <div class="who"><i>SW</i><span><b>Sarah Whitfield</b><span>Director, IT Consultancy · London, UK</span></span></div>
+        <div class="t-carousel reveal" id="tCarousel" aria-roledescription="carousel" aria-label="Client testimonials">
+          <div class="t-track">
+            <div class="t-slide">
+              <div class="quote">
+                <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <blockquote>"We'd been burned by two agencies before. These guys agreed on what a qualified meeting looked like up front, then actually delivered them. Our calendar hasn't looked this healthy in years."</blockquote>
+                <div class="who"><i>SW</i><span><b>Sarah Whitfield</b><span>Director, IT Consultancy · London, UK</span></span></div>
+              </div>
+            </div>
+            <div class="t-slide">
+              <div class="quote">
+                <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <blockquote>"The weekly reporting is the best I've seen from any agency: every number, every week, no spin. When an angle underperformed they told us before we asked and fixed it."</blockquote>
+                <div class="who"><i>DK</i><span><b>Daniel Kowalski</b><span>Head of Growth, Fintech Scale-up · Austin, USA</span></span></div>
+              </div>
+            </div>
+            <div class="t-slide">
+              <div class="quote">
+                <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
+                <blockquote>"From kickoff to first sends in under three weeks, and the copy actually sounds like us. The replies land in our inbox with full context, so our team just picks up the phone."</blockquote>
+                <div class="who"><i>EC</i><span><b>Emma Carter</b><span>Managing Partner, Recruitment Firm · Toronto, Canada</span></span></div>
+              </div>
+            </div>
           </div>
-          <div class="quote reveal">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <blockquote>"The weekly reporting is the best I've seen from any agency: every number, every week, no spin. When an angle underperformed they told us before we asked and fixed it."</blockquote>
-            <div class="who"><i>DK</i><span><b>Daniel Kowalski</b><span>Head of Growth, Fintech Scale-up · Austin, USA</span></span></div>
-          </div>
-          <div class="quote reveal">
-            <span class="stars" aria-label="5 out of 5 stars">★★★★★</span>
-            <blockquote>"From kickoff to first sends in under three weeks, and the copy actually sounds like us. The replies land in our inbox with full context, so our team just picks up the phone."</blockquote>
-            <div class="who"><i>EC</i><span><b>Emma Carter</b><span>Managing Partner, Recruitment Firm · Toronto, Canada</span></span></div>
+          <div class="t-nav">
+            <button class="t-btn t-prev" aria-label="Previous testimonial">←</button>
+            <div class="t-dots"></div>
+            <button class="t-btn t-next" aria-label="Next testimonial">→</button>
           </div>
         </div>
         <div class="center-cta reveal" style="margin-top:40px">
@@ -343,6 +393,10 @@
           <span class="eyebrow">FAQ</span>
           <h2>Frequently asked questions</h2>
         </div>
+        <div class="faq-search reveal">
+          <input id="faqSearch" type="search" placeholder="Search the FAQs…" aria-label="Search the FAQs" />
+        </div>
+        <p class="faq-empty" id="faqEmpty" hidden>No matching questions found. Try another keyword, or <a href="contact.html">contact us</a> directly.</p>
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false"><span>What does a fully managed cold email agency actually do?</span><span class="chev" aria-hidden="true">+</span></button>

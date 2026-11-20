@@ -32,6 +32,8 @@ async function deliverLead(payload) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   // Sticky header shadow
   const header = document.getElementById("siteHeader");
   if (header) {
@@ -85,6 +87,205 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }, { threshold: 0.12 });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    // ===== Interactive enhancements =====
+    // Scroll progress bar (sitewide)
+    const progress = document.createElement("div");
+    progress.className = "scroll-progress";
+    document.body.appendChild(progress);
+    const setProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + "%";
+    };
+    window.addEventListener("scroll", setProgress, { passive: true });
+    window.addEventListener("resize", setProgress);
+    setProgress();
+
+    // Back-to-top button (sitewide)
+    const toTop = document.createElement("button");
+    toTop.className = "to-top";
+    toTop.setAttribute("aria-label", "Back to top");
+    toTop.innerHTML = "&uarr;";
+    document.body.appendChild(toTop);
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: prefersReduced ? "auto" : "smooth" }));
+    const toggleTop = () => toTop.classList.toggle("show", window.scrollY > 600);
+    window.addEventListener("scroll", toggleTop, { passive: true });
+    toggleTop();
+
+    // WhatsApp mini-chat panel (sitewide)
+    const waWidget = document.querySelector(".wa-widget");
+    if (waWidget) {
+      const chat = document.createElement("div");
+      chat.className = "wa-chat";
+      chat.setAttribute("role", "dialog");
+      chat.setAttribute("aria-label", "Chat with B2BGenerate on WhatsApp");
+      chat.innerHTML =
+        '<div class="wa-chat-head"><button class="wa-chat-close" aria-label="Close chat">&times;</button><b>B2BGenerate</b><small>Typically replies within the hour (ICT)</small></div>' +
+        '<div class="wa-chat-body"><div class="wa-hello">Hi there \uD83D\uDC4B Looking to generate more leads? Pick a topic and we will continue on WhatsApp:</div>' +
+        '<button class="wa-opt" data-msg="I\'d like to book a strategy call.">\uD83D\uDCC5 Book a strategy call</button>' +
+        '<button class="wa-opt" data-msg="I have a question about your pricing.">\uD83D\uDCB0 Pricing question</button>' +
+        '<button class="wa-opt" data-msg="I\'d like a free cold email campaign plan.">\uD83D\uDCC4 Free campaign plan</button>' +
+        '<button class="wa-opt" data-msg="I need help with email deliverability.">\uD83D\uDEE0 Deliverability help</button>' +
+        '<div class="wa-chat-foot">Opens WhatsApp \u00b7 +61 466 554 433</div></div>';
+      document.body.appendChild(chat);
+      waWidget.addEventListener("click", (e) => {
+        e.preventDefault();
+        chat.classList.toggle("open");
+      });
+      chat.querySelector(".wa-chat-close").addEventListener("click", () => chat.classList.remove("open"));
+      chat.querySelectorAll(".wa-opt").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          window.open("https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(btn.dataset.msg), "_blank", "noopener");
+          chat.classList.remove("open");
+        });
+      });
+    }
+
+    // Animated counters
+    const counters = document.querySelectorAll("[data-count]");
+    if (counters.length) {
+      const fmtCount = (v) => Math.round(v).toLocaleString("en-US");
+      const runCounter = (el) => {
+        const target = parseFloat(el.dataset.count);
+        if (prefersReduced) { el.textContent = fmtCount(target); return; }
+        const t0 = performance.now(), dur = 1300;
+        const tick = (now) => {
+          const k = Math.min((now - t0) / dur, 1);
+          el.textContent = fmtCount(target * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+      const cio = new IntersectionObserver((entries) => entries.forEach((en) => {
+        if (en.isIntersecting) { runCounter(en.target); cio.unobserve(en.target); }
+      }), { threshold: 0.4 });
+      counters.forEach((el) => cio.observe(el));
+    }
+
+    // Dashboard bar animation
+    const dash = document.querySelector(".dash");
+    if (dash && !prefersReduced) {
+      dash.classList.add("pre");
+      const dio = new IntersectionObserver((entries) => entries.forEach((en) => {
+        if (en.isIntersecting) {
+          requestAnimationFrame(() => dash.classList.add("animate"));
+          dio.unobserve(dash);
+        }
+      }), { threshold: 0.35 });
+      dio.observe(dash);
+    }
+
+    // Testimonial carousel (home)
+    const tCarousel = document.getElementById("tCarousel");
+    if (tCarousel) {
+      const track = tCarousel.querySelector(".t-track");
+      const slides = tCarousel.querySelectorAll(".t-slide");
+      const dotsBox = tCarousel.querySelector(".t-dots");
+      let idx = 0, timer = null;
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.className = "t-dot";
+        dot.setAttribute("aria-label", "Go to testimonial " + (i + 1));
+        dot.addEventListener("click", () => { go(i); restart(); });
+        dotsBox.appendChild(dot);
+      });
+      const dots = dotsBox.querySelectorAll(".t-dot");
+      const go = (i) => {
+        idx = (i + slides.length) % slides.length;
+        track.style.transform = "translateX(-" + idx * 100 + "%)";
+        dots.forEach((d, di) => d.classList.toggle("active", di === idx));
+      };
+      const restart = () => {
+        if (prefersReduced) return;
+        clearInterval(timer);
+        timer = setInterval(() => go(idx + 1), 6000);
+      };
+      tCarousel.querySelector(".t-prev").addEventListener("click", () => { go(idx - 1); restart(); });
+      tCarousel.querySelector(".t-next").addEventListener("click", () => { go(idx + 1); restart(); });
+      tCarousel.addEventListener("mouseenter", () => clearInterval(timer));
+      tCarousel.addEventListener("mouseleave", restart);
+      go(0);
+      restart();
+    }
+
+    // Rotating hero headline (home)
+    const heroWord = document.getElementById("heroWord");
+    if (heroWord && !prefersReduced) {
+      const words = ["qualified meetings", "booked sales calls", "sales conversations", "pipeline growth"];
+      let wi = 0, ci = words[0].length, deleting = true;
+      const step = () => {
+        const word = words[wi];
+        if (deleting) {
+          ci--;
+          if (ci <= 0) { deleting = false; wi = (wi + 1) % words.length; }
+        } else {
+          ci++;
+          if (ci >= word.length) { heroWord.textContent = word; setTimeout(step, 2400); return; }
+        }
+        heroWord.textContent = word.slice(0, ci);
+        setTimeout(step, deleting ? 30 : 65);
+      };
+      setTimeout(step, 2600);
+    }
+
+    // FAQ live search (home)
+    const faqSearch = document.getElementById("faqSearch");
+    if (faqSearch) {
+      const faqItems = document.querySelectorAll(".faq-item");
+      const faqEmpty = document.getElementById("faqEmpty");
+      faqSearch.addEventListener("input", () => {
+        const q = faqSearch.value.trim().toLowerCase();
+        let visible = 0;
+        faqItems.forEach((item) => {
+          const match = item.textContent.toLowerCase().includes(q);
+          item.hidden = !match;
+          if (match) visible++;
+        });
+        if (faqEmpty) faqEmpty.hidden = visible !== 0;
+      });
+    }
+
+    // Button ripple (sitewide)
+    if (!prefersReduced) {
+      document.addEventListener("click", (e) => {
+        const btn = e.target.closest(".btn");
+        if (!btn) return;
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height) * 1.2;
+        const ripple = document.createElement("span");
+        ripple.className = "ripple";
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = (e.clientX - rect.left - size / 2) + "px";
+        ripple.style.top = (e.clientY - rect.top - size / 2) + "px";
+        btn.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 650);
+      });
+    }
+
+    // Lead calculator (home)
+    const calcRoot = document.getElementById("calcRoot");
+    if (calcRoot) {
+      const fmtN = (v) => Math.round(v).toLocaleString("en-US");
+      const updateCalc = () => {
+        const emails = +document.getElementById("cr-emails").value;
+        const reply = +document.getElementById("cr-reply").value;
+        const pos = +document.getElementById("cr-pos").value;
+        const meet = +document.getElementById("cr-meet").value;
+        document.getElementById("cv-emails").textContent = fmtN(emails);
+        document.getElementById("cv-reply").textContent = reply + "%";
+        document.getElementById("cv-pos").textContent = pos + "%";
+        document.getElementById("cv-meet").textContent = meet + "%";
+        const replies = emails * (reply / 100);
+        const positives = replies * (pos / 100);
+        document.getElementById("cv-out-replies").textContent = fmtN(replies);
+        document.getElementById("cv-out-pos").textContent = fmtN(positives);
+        document.getElementById("cv-out-meetings").textContent = fmtN(positives * (meet / 100));
+      };
+      ["emails", "reply", "pos", "meet"].forEach((id) =>
+        document.getElementById("cr-" + id).addEventListener("input", updateCalc));
+      updateCalc();
+    }
+
 
   // Campaign plan form (contact page)
   const planForm = document.getElementById("planForm");

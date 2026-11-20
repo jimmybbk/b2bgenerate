@@ -78,6 +78,19 @@ GA4/Plausible + Microsoft Clarity.
 | Guarantee terms | "agreed lead target / that period" | Must match the actual service contract |
 | Form endpoint | FormSubmit configured → `hello@b2bgenerate.com` | Click the activation link in that inbox once (sent on first submission) |
 
+## Interactive features
+
+- **Lead calculator** (home): sliders model replies, positive replies and booked meetings per
+  month; CTA links to the contact form. Illustrative benchmarks, labeled on-page.
+- **Testimonial carousel** (home): auto-rotates every 6s with arrows and dots, pauses on hover.
+- **Animated counters + dashboard bars** animate when scrolled into view.
+- **Rotating hero headline** (typewriter cycle through four phrases).
+- **FAQ live search** (home) filters questions while typing.
+- **WhatsApp mini-chat panel** (every page): the floating button opens a panel with
+  quick-topic buttons that deep-link into WhatsApp.
+- **Scroll progress bar, back-to-top button, button ripples** sitewide.
+- All motion respects `prefers-reduced-motion`; the site stays fully functional without JavaScript.
+
 ## Compliance notes
 
 - **`privacy/index.html` and `terms/index.html` are original templates written for this business
