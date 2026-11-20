@@ -8,7 +8,7 @@ placeholders; visuals are CSS/SVG plus the supplied brand logo and generated sha
 **Core positioning:** *If we don't produce leads, you don't pay* — hero, service cards,
 about, guarantee banner, FAQs and CTAs all carry it.
 
-**Live:** https://jimmybbk.github.io/b2bgenerate/ · Repo: `jimmybbk/b2bgenerate`
+**Live:** https://b2bgenerate.com/ · Repo: `jimmybbk/b2bgenerate`
 (GitHub Pages, main branch — pushes redeploy automatically in ~1 minute.)
 
 ## Pages

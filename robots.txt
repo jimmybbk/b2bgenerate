@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jimmybbk.github.io/b2bgenerate/sitemap.xml
+Sitemap: https://b2bgenerate.com/sitemap.xml
