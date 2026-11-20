@@ -73,7 +73,7 @@ GA4/Plausible + Microsoft Clarity.
 | Address | "Sheridan, Wyoming, USA" (city only) | Footer/contact page/JSON-LD |
 | Case studies | 4 fictional examples | `results/index.html` — real, verifiable results only |
 | Testimonials | 3 fictional quotes | `results/index.html` + home — real quotes with consent |
-| Blog | 1 live guide + 2 "Coming soon" stubs | `blog/index.html` + `blog/b2b-marketing-consultants/` |
+| Blog | 2 live guides + 1 "Coming soon" stub | `blog/index.html` + article folders |
 | Pricing claim | "from US$2,500/month" | FAQ + pricing page — align with real terms |
 | Guarantee terms | "agreed lead target / that period" | Must match the actual service contract |
 | Form endpoint | FormSubmit configured → `hello@b2bgenerate.com` | Click the activation link in that inbox once (sent on first submission) |

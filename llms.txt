@@ -16,6 +16,7 @@ B2BGenerate runs the entire outbound channel for clients: prospect research and 
 - [Privacy Policy](https://b2bgenerate.com/privacy): how information is collected, used and protected
 - [Terms & Conditions](https://b2bgenerate.com/terms): website terms and the framework under which services are provided
 - [B2B Marketing Consultants guide](https://b2bgenerate.com/blog/b2b-marketing-consultants/): what consultants do, pricing models and how to choose the right one
+- [Cold Email Agency vs Facebook Ads](https://b2bgenerate.com/blog/cold-email-agency-vs-facebook-ads/): why targeted outbound email can beat Facebook Ads for B2B lead generation
 - [Sitemap](https://b2bgenerate.com/sitemap): directory of all pages
 - [XML Sitemap](https://b2bgenerate.com/sitemap.xml): machine-readable page index for search engines
 
