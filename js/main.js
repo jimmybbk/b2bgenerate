@@ -6,7 +6,7 @@
 // inbox; clicking it once switches on automatic delivery for all future submissions.
 const FORM_ENDPOINT = "https://formsubmit.co/ajax/hello@b2bgenerate.com";
 const LEAD_EMAIL = "hello@b2bgenerate.com";
-const WHATSAPP_NUMBER = "61466554433"; // international format without "+", for wa.me links
+const WHATSAPP_NUMBER = "61450463767"; // international format without "+", for wa.me links
 
 async function deliverLead(payload) {
   if (FORM_ENDPOINT) {
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         '<button class="wa-opt" data-msg="I have a question about your pricing.">\uD83D\uDCB0 Pricing question</button>' +
         '<button class="wa-opt" data-msg="I\'d like a free cold email campaign plan.">\uD83D\uDCC4 Free campaign plan</button>' +
         '<button class="wa-opt" data-msg="I need help with email deliverability.">\uD83D\uDEE0 Deliverability help</button>' +
-        '<div class="wa-chat-foot">Opens WhatsApp \u00b7 +61 466 554 433</div></div>';
+        '<div class="wa-chat-foot">Opens WhatsApp \u00b7 0450 463 767</div></div>';
       document.body.appendChild(chat);
       waWidget.addEventListener("click", (e) => {
         e.preventDefault();

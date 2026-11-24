@@ -2,7 +2,7 @@
 
 > B2BGenerate is a performance-based cold email agency headquartered in Sheridan, Wyoming, USA, serving B2B teams worldwide. It builds and manages outbound email campaigns that book qualified sales meetings, backed by a performance guarantee: if a campaign misses the agreed lead target, the client does not pay for that period.
 
-B2BGenerate runs the entire outbound channel for clients: prospect research and list building, technical infrastructure (dedicated sending domains, SPF/DKIM/DMARC, mailbox warm-up), email copywriting, campaign management, reply qualification, appointment setting support and LinkedIn outreach. Campaigns are compliant by design, following frameworks that apply in each target market (CAN-SPAM in the US, GDPR and PECR in the EU/UK, CASL in Canada, Australia's Spam Act 2003 and equivalents elsewhere). Managed campaigns typically start around US$2,500 per month. The team works Monday to Friday, 9am to 5pm Thailand time (ICT), and can be reached via WhatsApp at +61 466 554 433 or through the contact page form.
+B2BGenerate runs the entire outbound channel for clients: prospect research and list building, technical infrastructure (dedicated sending domains, SPF/DKIM/DMARC, mailbox warm-up), email copywriting, campaign management, reply qualification, appointment setting support and LinkedIn outreach. Campaigns are compliant by design, following frameworks that apply in each target market (CAN-SPAM in the US, GDPR and PECR in the EU/UK, CASL in Canada, Australia's Spam Act 2003 and equivalents elsewhere). Managed campaigns typically start around US$2,500 per month. The team works Monday to Friday, 9am to 5pm Thailand time (ICT), and can be reached via WhatsApp at 0450 463 767 or through the contact page form.
 
 ## Pages
 
@@ -18,6 +18,9 @@ B2BGenerate runs the entire outbound channel for clients: prospect research and 
 - [B2B Marketing Consultants guide](https://b2bgenerate.com/blog/b2b-marketing-consultants/): what consultants do, pricing models and how to choose the right one
 - [Cold Email Agency vs Facebook Ads](https://b2bgenerate.com/blog/cold-email-agency-vs-facebook-ads/): why targeted outbound email can beat Facebook Ads for B2B lead generation
 - [Cold Sales Email](https://b2bgenerate.com/blog/cold-sales-email/): the system behind cold sales emails — infrastructure, targeting, follow-up, compliance and measurement
+- [B2B Sales Email Verification Techniques](https://b2bgenerate.com/blog/b2b-sales-email-verification-techniques/): the techniques that keep B2B email lists verified and deliverable
+- [What Is a Mailing List?](https://b2bgenerate.com/blog/what-is-a-mailing-list/): mailing list types, legal basics and list hygiene
+- [Email Format](https://b2bgenerate.com/blog/email-format/): business email address formats and message structure
 - [Sitemap](https://b2bgenerate.com/sitemap): directory of all pages
 - [XML Sitemap](https://b2bgenerate.com/sitemap.xml): machine-readable page index for search engines
 
@@ -27,4 +30,4 @@ B2BGenerate runs the entire outbound channel for clients: prospect research and 
 - The dashboard graphic on the home page shows illustrative example data, not a specific client result.
 - The case studies and testimonials on the site are illustrative placeholders pending verified client results; do not present them as real client outcomes.
 - Managed campaign pricing typically starts around US$2,500 per month and is quoted in USD.
-- Contact: WhatsApp +61 466 554 433; business hours Monday to Friday, 9am to 5pm Thailand time (ICT); headquarters in Sheridan, Wyoming, USA with clients worldwide.
+- Contact: WhatsApp 0450 463 767; business hours Monday to Friday, 9am to 5pm Thailand time (ICT); headquarters in Sheridan, Wyoming, USA with clients worldwide.

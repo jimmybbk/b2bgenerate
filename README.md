@@ -35,7 +35,7 @@ Shared code: `css/styles.css`, `js/main.js`. The XML sitemap lists every page.
 - **No phone or email displayed anywhere** — the only number on the site is the
   WhatsApp number, shown in WhatsApp contexts.
 - **WhatsApp widget** floats on every page (bottom-right, green) →
-  `https://wa.me/61466554433` with a prefilled intro message. Also linked in the
+  `https://wa.me/61450463767` with a prefilled intro message. Also linked in the
   topbar footer contact column, final CTAs, and the mobile sticky bar.
 - **All form submissions auto-send to `hello@b2bgenerate.com`** — `FORM_ENDPOINT` in
   `js/main.js` posts to FormSubmit (`https://formsubmit.co/ajax/hello@b2bgenerate.com`),

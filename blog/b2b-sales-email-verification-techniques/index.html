@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B2B Sales Email Verification Techniques | B2BGenerate</title>
+  <meta name="description" content="The verification techniques that keep B2B sales email lists clean: syntax checks, domain checks, SMTP validation, catch-all detection and list hygiene." />
+  <link rel="canonical" href="https://b2bgenerate.com/blog/b2b-sales-email-verification-techniques/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#010409" />
+  <meta property="og:site_name" content="B2BGenerate" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://b2bgenerate.com/blog/b2b-sales-email-verification-techniques/" />
+  <meta property="og:title" content="B2B Sales Email Verification Techniques" />
+  <meta property="og:description" content="The verification techniques that keep B2B sales email lists clean: syntax checks, domain checks, SMTP validation, catch-all detection and list hygiene." />
+  <meta property="og:image" content="https://b2bgenerate.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="B2B Sales Email Verification Techniques" />
+  <meta name="twitter:description" content="The verification techniques that keep B2B sales email lists clean: syntax checks, domain checks, SMTP validation, catch-all detection and list hygiene." />
+  <meta name="twitter:image" content="https://b2bgenerate.com/assets/og-image.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="https://b2bgenerate.com/assets/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="https://b2bgenerate.com/assets/favicon-512.png" />
+  <link rel="apple-touch-icon" href="https://b2bgenerate.com/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "B2B Sales Email Verification Techniques",
+    "description": "The verification techniques that keep B2B sales email lists clean: syntax checks, domain checks, SMTP validation, catch-all detection and list hygiene.",
+    "author": { "@type": "Organization", "name": "B2BGenerate" },
+    "publisher": { "@type": "Organization", "name": "B2BGenerate" },
+    "mainEntityOfPage": "https://b2bgenerate.com/blog/b2b-sales-email-verification-techniques/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+        "@type": "Question",
+        "name": "How accurate is email verification?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Quality tools typically resolve the vast majority of a list with high confidence. Catch-all domains and temporary server failures leave a margin that no tool can eliminate, which is why results are graded rather than presented as absolute." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does verification guarantee my emails will be delivered?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Verification confirms an address can receive mail. Delivery also depends on your sender reputation, authentication, content and engagement. Verification removes the list problem; it does not fix a poor sending setup." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should a B2B list be verified?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Before every campaign, after any new data source, and at least quarterly for lists in regular use. Business data decays quickly as people change roles." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I verify a purchased list to make it safe to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Verification confirms whether an address exists. It does not create consent. Buying a list and verifying it does not make the outreach compliant in most markets, so check the rules that apply before sending." }
+      },
+      {
+        "@type": "Question",
+        "name": "What bounce rate should I expect after verification?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A verified list should produce hard bounce rates in the low single digits. If a verified campaign still bounces above that, the verification provider or the data source is the problem." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Top utility bar -->
+  <div class="topbar">
+    <div class="container">
+      <span class="location"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> Serving clients worldwide. HQ in Sheridan, Wyoming, USA</span>
+      <div class="right">
+        <span><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon–Fri, 9am–5pm Thailand time (ICT)</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <a class="logo" href="../../index.html" aria-label="B2BGenerate, performance-based cold email agency">
+        <img class="logo-img" src="../../assets/b2bgenerate-logo.png" alt="B2BGenerate logo" width="2172" height="724" />
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../services/">Services</a></li>
+          <li><a href="../../pricing/">Pricing</a></li>
+          <li><a href="../../results/">Results</a></li>
+          <li><a href="../../about/">About</a></li>
+          <li><a class="active" href="../../blog/">Blog</a></li>
+          <li><a href="../../contact/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-primary" href="../../contact/">Contact Us</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Guides</span>
+        <h1>B2B Sales Email Verification Techniques</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:56px">
+      <div class="container">
+        <div class="legal">
+          <span class="updated">B2BGenerate · Guides</span>
+
+          <p>Every cold sales email program lives or dies by the quality of its recipient list. A campaign built on verified contacts lands in inboxes, generates replies and protects your sender reputation. The same campaign built on stale or bogus addresses bounces, gets flagged and can land your domain on blocklists for weeks.</p>
+          <p>Email verification is the discipline that prevents all of it: checking every address on a list before a single email goes out, so your campaign only reaches real inboxes at real companies. This guide explains the techniques used to verify B2B sales email addresses, what each one catches, where the limits are and how to keep a list clean over time.</p>
+
+          <h2>Why Verification Comes Before Everything</h2>
+          <p>Mailbox providers such as Gmail and Outlook track bounce rates per sending domain. Cross a threshold, commonly around three to five percent, and your emails start landing in spam regardless of how good the content is. Verification protects that reputation before the first send.</p>
+          <p>It also protects your budget. Most outreach tools price by contact or by sending volume, so every fake address is money spent on a message that can never land. And it protects compliance: a clean, verified list with suppression records is far easier to defend than a mystery list of unknown origin.</p>
+
+          <h2>The Six Verification Techniques</h2>
+
+          <h3>1. Syntax Checking</h3>
+          <p>The fastest and cheapest check. Every address must follow the standard format: a local part, the @ symbol and a domain with valid characters. Syntax checks catch typos, missing @ signs, double dots and stray spaces instantly, before anything else needs to run.</p>
+
+          <h3>2. Domain and MX Record Checks</h3>
+          <p>Next, the domain is confirmed to exist and to publish mail exchange (MX) records. A domain without MX records cannot receive email at any address, so every contact at it is undeliverable before a single mailbox is checked. This also catches companies that have shut down or moved off a domain entirely.</p>
+
+          <h3>3. SMTP Mailbox Validation</h3>
+          <p>The deepest check. The verification system connects to the recipient's mail server and asks, without sending an email, whether that specific mailbox exists. It catches the addresses that pass syntax and domain checks but were never created, or were deleted when an employee left the company.</p>
+          <p>Limits exist: some servers refuse these queries, some connections are rate-limited, and the largest providers handle them inconsistently. Professional verification accounts for this and marks uncertain results rather than guessing.</p>
+
+          <h3>4. Catch-All Detection</h3>
+          <p>Some domains are configured to accept every address, real or not. A catch-all domain will happily confirm a mailbox that does not exist. Verification detects this by testing a random address at the same domain: if the random address is accepted too, every result at that domain is flagged as a catch-all and treated conservatively.</p>
+
+          <h3>5. Disposable and Role-Based Screening</h3>
+          <p>Disposable addresses from temporary inbox services are worthless for B2B and are screened out. Role-based addresses such as info@, sales@ and support@ are shared inboxes rather than people; they can still be useful, but they convert differently and are flagged so campaigns can treat them as their own segment.</p>
+
+          <h3>6. Engagement-Based Verification</h3>
+          <p>The final test is real-world behavior. Addresses that have been emailed repeatedly without a single open or reply across several campaigns are moved to a dormant segment, and hard-bounced addresses are suppressed permanently. A list is never finished; it is maintained.</p>
+
+          <h2>When to Verify a List</h2>
+          <ul>
+            <li>When contacts are collected or imported.</li>
+            <li>Before every campaign launch.</li>
+            <li>After any data purchase or merge.</li>
+            <li>Quarterly, for lists that are contacted regularly.</li>
+            <li>Whenever deliverability metrics drift without an obvious cause.</li>
+          </ul>
+
+          <h2>What Verification Results Look Like</h2>
+          <p>Professional verification sorts a list into groups: valid, catch-all, unknown, disposable, role-based and invalid. Valid addresses are safe to send. Catch-alls can be tested with a small volume first. Unknowns should be re-checked later rather than emailed blindly. Invalid, disposable and abusive addresses are removed.</p>
+          <p>A quality verification run typically resolves the vast majority of a list into valid or invalid, with a small remainder in the catch-all and unknown groups. Be wary of any tool that claims one hundred percent certainty; the honest providers explain their margins.</p>
+
+          <h2>Verification and Compliance</h2>
+          <p>Verification supports compliance but is not the same as consent. A verified address is a real address; it is not automatically an address you are allowed to email. Keep consent and source records alongside verification results, honor suppressions across every tool you use, and follow the unsubscribe and identification rules that apply in your market: CAN-SPAM in the US, GDPR and PECR in Europe, CASL in Canada and Australia's Spam Act 2003.</p>
+
+          <h2>Common Verification Mistakes</h2>
+          <ul>
+            <li>Verifying a list once and never again.</li>
+            <li>Trusting every catch-all result.</li>
+            <li>Emailing unknown addresses to squeeze out a few extra sends.</li>
+            <li>Cleaning a purchased list and calling it consent.</li>
+            <li>Skipping re-verification after staff changes at target companies.</li>
+            <li>Ignoring role-based addresses and mailing shared inboxes as if they were individuals.</li>
+          </ul>
+
+          <h2>How Verification Fits a Managed Campaign</h2>
+          <p>At B2BGenerate, verification is built into onboarding: every list is verified before the first send, catch-alls are handled conservatively, and results are re-checked before every campaign period. It is one of the least visible parts of a managed campaign and one of the biggest reasons its emails land.</p>
+
+          <h2>Frequently Asked Questions</h2>
+          <h3>How accurate is email verification?</h3>
+          <p>Quality tools typically resolve the vast majority of a list with high confidence. Catch-all domains and temporary server failures leave a margin that no tool can eliminate, which is why results are graded rather than presented as absolute.</p>
+          <h3>Does verification guarantee my emails will be delivered?</h3>
+          <p>No. Verification confirms an address can receive mail. Delivery also depends on your sender reputation, authentication, content and engagement. Verification removes the list problem; it does not fix a poor sending setup.</p>
+          <h3>How often should a B2B list be verified?</h3>
+          <p>Before every campaign, after any new data source, and at least quarterly for lists in regular use. Business data decays quickly as people change roles.</p>
+          <h3>Can I verify a purchased list to make it safe to use?</h3>
+          <p>Verification confirms whether an address exists. It does not create consent. Buying a list and verifying it does not make the outreach compliant in most markets, so check the rules that apply before sending.</p>
+          <h3>What bounce rate should I expect after verification?</h3>
+          <p>A verified list should produce hard bounce rates in the low single digits. If a verified campaign still bounces above that, the verification provider or the data source is the problem.</p>
+
+          <h2>Final Thoughts</h2>
+          <p>Email verification is not glamorous, and it is never finished. It is also one of the cheapest ways to protect everything else you spend on outreach: your domain, your copy, your tools and your team's time.</p>
+          <p>Verify before you send, segment what you cannot verify, suppress what bounces, and repeat. That is the whole discipline, and it is the difference between a campaign that builds pipeline and a campaign that builds blocklist entries.</p>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section final-cta">
+      <div class="container reveal">
+        <span class="eyebrow" style="justify-content:center;display:inline-flex">Work with B2BGenerate</span>
+        <h2>Want this running for your business?</h2>
+        <p>Everything in this guide is the process we run for clients every week, managed end to end. Performance-based: if we don't produce leads, you don't pay.</p>
+        <div class="hero-ctas" style="justify-content:center">
+          <a class="btn btn-primary" href="../../contact/">Contact Us</a>
+          <a class="btn btn-wa" href="https://wa.me/61450463767?text=Hi%20B2BGenerate%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20cold%20email%20service." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg> Chat on WhatsApp</a>
+        </div>
+        <div class="quick">
+          <span><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Mon–Fri, 9am–5pm Thailand time (ICT)</span>
+          <span><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Sheridan, Wyoming, USA (clients worldwide)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="../../index.html" aria-label="B2BGenerate, performance-based cold email agency">
+            <img class="logo-img" src="../../assets/b2bgenerate-logo.png" alt="B2BGenerate logo" width="2172" height="724" style="height:40px" loading="lazy" />
+          </a>
+          <p>B2BGenerate runs performance-based cold email for B2B teams worldwide from Sheridan, Wyoming. Fully managed outbound that books qualified sales meetings. No leads, no fee.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../services/">Services</a></li>
+            <li><a href="../../pricing/">Pricing</a></li>
+            <li><a href="../../results/">Results</a></li>
+            <li><a href="../../about/">About Us</a></li>
+            <li><a href="../../blog/">Blog</a></li>
+            <li><a href="../../contact/">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li class="contact-line"><svg class="i-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg><a href="https://wa.me/61450463767" target="_blank" rel="noopener">WhatsApp: 0450 463 767</a></li>
+            <li class="contact-line"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><span>Sheridan, Wyoming, USA</span></li>
+            <li class="contact-line"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon–Fri, 9am–5pm Thailand time (ICT)</span></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Send a Message</h4>
+          <form class="footer-form" id="footerForm" novalidate>
+            <label for="ff-name" style="position:absolute;left:-999px">Name</label>
+            <input id="ff-name" type="text" placeholder="Your name" required />
+            <label for="ff-email" style="position:absolute;left:-999px">Email</label>
+            <input id="ff-email" type="email" placeholder="Your email" required />
+            <textarea id="ff-msg" placeholder="How can we help?" required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <!-- PLACEHOLDER: replace "LLC" with your exact registered entity name -->
+        <span>© <span id="year">2026</span> B2BGenerate LLC. All rights reserved. Registered in Wyoming, USA.</span>
+        <span>
+          <a href="../../privacy/">Privacy Policy</a>
+          <a href="../../terms/">Terms &amp; Conditions</a>
+          <a href="../../sitemap/">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile sticky action bar -->
+  <div class="mobile-bar">
+    <a class="wa" href="https://wa.me/61450463767" target="_blank" rel="noopener"><svg class="i-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg> WhatsApp</a>
+    <a class="mid" href="../../contact/"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg> Book</a>
+    <a href="../../contact/#plan"><svg class="i-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg> Free Plan</a>
+  </div>
+
+  <!-- WhatsApp floating widget -->
+  <a class="wa-widget" href="https://wa.me/61450463767?text=Hi%20B2BGenerate%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20cold%20email%20service." target="_blank" rel="noopener" aria-label="Chat with B2BGenerate on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    <span class="wa-tip">Chat with us (replies within the hour, ICT)</span>
+  </a>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
