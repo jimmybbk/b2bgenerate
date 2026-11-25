@@ -21,6 +21,9 @@ B2BGenerate runs the entire outbound channel for clients: prospect research and 
 - [B2B Sales Email Verification Techniques](https://b2bgenerate.com/blog/b2b-sales-email-verification-techniques/): the techniques that keep B2B email lists verified and deliverable
 - [What Is a Mailing List?](https://b2bgenerate.com/blog/what-is-a-mailing-list/): mailing list types, legal basics and list hygiene
 - [Email Format](https://b2bgenerate.com/blog/email-format/): business email address formats and message structure
+- [Cold Email: What It Is and How It Works](https://b2bgenerate.com/blog/cold-email/): what cold email is, how campaigns run and the numbers that matter
+- [Cold Email Lead Sourcing Tools](https://b2bgenerate.com/blog/cold-email-lead-sourcing-tools/): Apollo, Hunter and public directory data for building verified prospect lists
+- [How Much Does Cold Email Infrastructure Cost?](https://b2bgenerate.com/blog/cold-email-infrastructure-cost/): the real line items, with monthly figures
 - [Sitemap](https://b2bgenerate.com/sitemap): directory of all pages
 - [XML Sitemap](https://b2bgenerate.com/sitemap.xml): machine-readable page index for search engines
 
